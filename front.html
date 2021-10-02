@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>bbs</title>
+    </head>
+    <body>
+        <dl id="wrap">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script type="text/javascript">
+            const url = "http://192.168.33.xx:3000/bbs";
+              $(function(){
+                $.getJSON(url, function(note_list){
+
+                  note_list.sort(function(a, b){
+                    if (a.date < b.date){
+                      return -1;
+                    }else{
+                      return 1;
+                    }
+                  });
+
+                  for(var i in note_list){
+                    var h = '<dt>'
+                          + note_list[i].date
+                          + " "
+                          + note_list[i].owner
+                          + '</dt>'
+                          + '<dd>'
+                          + note_list[i].note
+                          + '</dd>';
+                    $("dl#wrap").append(h);
+                  }
+
+                });
+              });
+
+            </script>
+          </dl>
+
+          <p>投稿者: <input type="text" id="owner" size="30"></p>
+          <p>NOTE: <input type="text" id="note" size="30"></p>
+          <p><button id="button" type="button">投稿</button></p>
+
+          <script type="text/javascript">
+            $(function(){
+                $("#response").html("Response Values");
+        
+                $("#button").click( function(){
+                    var url = "http://192.168.33.xx:3000/register";
+                        var JSONdata = {
+                            "owner": String($("#owner").val()) ,
+                            "note": String($("#note").val())     
+                        };
+        
+                    $.ajax({
+                        type : 'post',
+                        url : url,
+                        data : JSON.stringify(JSONdata),
+                        contentType: 'application/json',
+                        dataType : 'json',
+                        scriptCharset: 'utf-8',
+                        success : function(date){
+                          window.location.reload();
+                        },
+                        error : function(date){
+                          window.location.reload();
+                        }
+                    });
+                })
+            })
+        </script>
+
+    </body>
+</html>

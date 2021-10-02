@@ -1,0 +1,67 @@
+{
+    "bbs": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "postId": {
+                        "S": "e29b7e91-0377-43a0-bc0e-87daa2775a01"
+                    },
+                    "date": {
+                        "S": "2021-10-01 21:38:09.139938"
+                    },
+                    "owner": {
+                        "S": "keisuke"
+                    },
+                    "note": {
+                        "S": "初投稿"
+                    },
+                    "enable": {
+                        "BOOL": true
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "postId": {
+                        "S": "e29b7e91-0377-43a0-bc0e-87daa2775a02"
+                    },
+                    "date": {
+                        "S": "2021-10-01 21:38:09.139939"
+                    },
+                    "owner": {
+                        "S": "keisuke"
+                    },
+                    "note": {
+                        "S": "2回目の投稿"
+                    },
+                    "enable": {
+                        "BOOL": true
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "postId": {
+                        "S": "e29b7e91-0377-43a0-bc0e-87daa2775a03"
+                    },
+                    "date": {
+                        "S": "2021-10-01 21:38:09.139940"
+                    },
+                    "owner": {
+                        "S": "keisuke"
+                    },
+                    "note": {
+                        "S": "3回目の投稿"
+                    },
+                    "enable": {
+                        "BOOL": true
+                    }
+                }
+            }
+        }
+    ]
+}

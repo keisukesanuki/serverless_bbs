@@ -1,0 +1,5 @@
+{
+    "Parameters": {
+      "DYNAMO_ENDPOINT": "http://192.168.33.77:8000"
+    }
+  }
