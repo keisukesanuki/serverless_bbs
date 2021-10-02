@@ -1,5 +1,5 @@
 {
     "Parameters": {
-      "DYNAMO_ENDPOINT": "http://192.168.33.77:8000"
+      "DYNAMO_ENDPOINT": "http://192.168.33.xx:8000"
     }
   }
